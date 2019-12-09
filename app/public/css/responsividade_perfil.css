@@ -1,0 +1,101 @@
+@media screen and (max-width: 450px){
+	.logo{
+		height: 25px;
+	}
+	.text{
+		font-size: 16pt;
+	}
+	#branding{
+		left: 20px;
+	}
+
+	.log{
+		font-size: 9pt;
+		right: 20px;
+	}
+	.icone{
+		height: 25px;
+		padding: 0px 5px 0px 5px;
+	}
+}
+
+@media screen and (min-width: 600px){
+	.im_perfil{
+		width: 200px;
+		height: 200px;
+	}
+	.texto{
+		font-size: 11pt;
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+	#form1{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+	#form2{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+}
+
+@media screen and (min-width: 800px){
+	.im_perfil{
+		width: 200px;
+		height: 200px;
+	}
+	.texto{
+		font-size: 11pt;
+		margin-left: 150px;
+		margin-right: 150px;
+	}
+	#form1{
+		margin-left: 150px;
+		margin-right: 150px;
+	}
+	#form2{
+		margin-left: 150px;
+		margin-right: 150px;
+	}
+}
+
+@media screen and (min-width: 950px){
+	.im_perfil{
+		width: 200px;
+		height: 200px;
+	}
+	.texto{
+		font-size: 11pt;
+		margin-left: 300px;
+		margin-right: 300px;
+	}
+	#form1{
+		margin-left: 300px;
+		margin-right: 300px;
+	}
+	#form2{
+		margin-left: 300px;
+		margin-right: 300px;
+	}
+}
+
+@media screen and (min-width: 1082px){
+	.im_perfil{
+		width: 200px;
+		height: 200px;
+	}
+	.texto{
+		font-size: 11pt;
+		margin-left: 350px;
+		margin-right: 350px;
+	}
+	#form1{
+		margin-left: 450px;
+		margin-right: 450px;
+	}
+	#form2{
+		margin-left: 450px;
+		margin-right: 450px;
+	}
+}
+

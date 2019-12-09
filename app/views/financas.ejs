@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ver registro de finanças</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/ver_finanças.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shotcut icon" href="img//rotarylogo.ico">
+</head>
+<body>
+	<header>
+		<div id="top">
+			<div id="branding"><h1 class="text" id="titulo">Rotary</h1>
+			<img class="logo" src="img/rotarylogo.png"></div>
+			<a class="log" href="login.html"><img class="icone" src="img/login.png">Meu perfil</a>
+		</div>
+	</header>
+	<main>
+		<div class="principal">
+			<h1>Selecione o período de tempo</h1>
+			<select class="periodo">
+				<option value="1 mês">1 mês</option>
+				<option value="6 meses">6 meses</option>
+				<option value="1 ano">1 ano</option>
+				<option value="5 anos">5 anos</option>
+			</select>
+			<input type="button" onclick="financas_verificar();" value="Resultados">
+		</div>
+		<div class="tabela">
+			<p id="valor_ganho"></p>
+			<p id="valor_gasto"></p>
+			<p id="valor_caixa"></p>
+		</div>
+	</main>
+	<script type="text/javascript" src="js/ver_finanças.js"></script>
+</body>
+</html>

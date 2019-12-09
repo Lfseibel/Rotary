@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700');
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+:root{
+	--orange: #f4623a; /* var(--orange); */
+	--arejamento1: 1rem;
+	--arejamento2: 0.9rem 1.6rem;
+	--arejamento3: 4rem;
+}
+
+body{
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+header{
+	position: absolute;
+}
+
+#top{
+	height: 100px;
+	width: 98vw;
+	display: flex;
+	align-items: center;
+	position: relative;
+	/*background: blue;*/
+}
+
+#branding{
+	display: flex;
+	align-items: center;
+	height: 50px;
+	position: absolute;
+	top: 25px;
+	left: 50px;
+	/*background: red;*/
+}
+
+.logo{
+	height: 30px;
+}
+
+
+#titulo{
+	font-size: 20pt;
+}
+
+#collapsible{
+	display: none;
+}
+
+#menu{
+	top: 25px;
+	position: absolute;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	right: 50px;
+}
+.fechar{
+	display: none;		
+}
+
+nav ul{
+	list-style: none;
+}
+
+li{
+	display: inline-flex;
+	padding: 0px 20px 0px 20px;
+	height: 50px;
+	align-items: center;
+}
+
+li a{
+	max-width: 150px;
+}
+
+a, span{
+	font-size: 12pt;
+	text-decoration: none;
+	color: black;
+	padding: 0px 5px 0px 5px;
+}
+
+.texto{
+	color: white;
+	font-weight: bold;
+}
+
+#hero{
+	height: 100vh;
+	background: url("../img/bg-rotary.png");
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icone{
+	height: 30px;
+}
+
+#mensagem{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#frase{
+	color: white;
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+#mensagem hr{
+	margin: .5rem;
+	width: 100px;
+	height: 3px;
+	background-color: var(--orange);
+	border-style: none;
+}
+
+.botao{
+	max-width: 560px;
+	padding: 15px;
+	border: 1px solid var(--orange);
+/*margin-bottom: 30px;*/
+	font-size: 12px;
+	line-height: 2;
+	color: white;
+	font-weight: bold;
+	border-radius: 70px;
+	background: var(--orange);
+	font-family: 'Merriweather Sans', sans-serif;
+	margin: 10px;
+	cursor: pointer;
+}
+
+.conecta{
+	height: 100vh;
+	background-color: var(--orange);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-rotary{
+	height: 150px;
+}
+
+.btnconect{
+	font-size: 12px;
+	border-style: none;
+	padding: var(--arejamento2);
+	background-color: white;
+	border-radius: 50px;
+	font-weight: bold;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+.conect{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.conect p{
+	color: rgba(255,255,255,.5);
+	text-align: center;
+	padding: 1rem;
+}
+
+.conect h1{
+	color: white;
+	text-transform: uppercase;
+	padding: 0.5rem;
+}
+
+.conect hr{
+	width: 100px;
+	height: 3px;
+	background-color: white;
+	border-style: none;
+}
+
+
+.meurotary{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mrcontent{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.mrcaixinhas{
+	margin: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.mrcontent hr{
+	margin: .5rem;
+	width: 100px;
+	height: 3px;
+	background-color: var(--orange);
+	border-style: none;
+}
+
+.mrcontent h1{
+	margin-top: 3rem;
+	text-transform: uppercase;
+}
+
+.caixinha{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*border: solid red;*/
+	margin: .7rem;
+	height: 300px;
+	width: 270px;
+	/*background: pink;*/
+}
+
+.caixinha h2{
+	background-color: var(--orange);
+	color: white;
+	padding: 0.7rem 2rem;
+	border-radius: 5px;
+}
+
+.caixinha p{
+	text-align: justify;
+	margin: 1rem;
+	color: #6c757d;
+}
+
+.caixinha img{
+	margin: 1rem;
+}
+
+.portfolio{
+	/*background: yellow;*/
+	display: flex;
+	justify-content: center;
+	margin-bottom: 100px;
+}
+#fotos{
+	max-width: 1050px;
+	/*background: red;*/
+	float: right;
+}
+
+.img_portfolio{
+	width: 325px;
+
+}
+
+.picture{
+	position: relative;
+	/*background: red;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 325px;
+	float: left;
+	margin: 10px;
+}
+.hover{
+  	color: white;
+  	overflow: hidden;
+	position: absolute;
+  	opacity: 0;
+  	transition: all 0.1s ease;
+  	height: 100%;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 10px;
+}
+
+.hover:hover{
+	opacity: 1;
+	background:  rgb(244,98,58,.9);
+  	background-opacity: 50%;
+}
+
+.contato{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2rem; 
+}
+
+.contato hr{
+	margin: .5rem;
+	width: 100px;
+	height: 3px;
+	background-color: var(--orange);
+	border-style: none;
+}
+
+.contatocaixa{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1rem;
+	width: 270px;
+}
+
+.contatoicone{ /*exemplo, tem que vetorizar os icones pra por aqui*/
+	height: 50px;
+	width: 50px;
+	background-color: var(--orange);
+	margin: .5rem;
+}
+
+.mapa{
+	margin: 1rem;
+	height: 200px;
+	width: 300px;
+	border: solid 2px var(--orange);
+}
+
+footer{
+	background-color: rgba(211, 211, 211, 1);
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer a{
+	color: rgba(44, 44, 44, 1);
+	font-size: .8rem;
+	text-align: center;
+}

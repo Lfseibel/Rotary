@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700');
+*{
+	padding: 0;
+	margin: 0;
+}
+
+:root{
+	--orange: #CA2712; /* var(--orange); */
+	--arejamento1: 1rem;
+	--arejamento2: 0.9rem 1.6rem;
+	--arejamento3: 4rem;
+}
+
+body{
+	height: 100vh;
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+header{
+	background: var(--orange);
+	position: relative;
+}
+#top{
+	width: 100%;
+	height: 100px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-bottom: 50px;
+}
+.logo{
+	height: 30px;
+	/*position: absolute;*/
+}
+#branding{
+	display: flex;
+	align-items: center;
+	height: 50px;
+	position: absolute;
+	top: 25px;
+	left: 50px;
+}
+.text{
+	color: white;
+	font-weight: bold;
+	font-size: 20pt;
+}	
+.log{
+	top: 25px;
+	position: absolute;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	right: 50px;
+	font-size: 12pt;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0px 15px 0px 15px;
+	color: white;
+}
+.icone{
+	height: 30px;
+	padding: 0px 15px 0px 15px;
+
+}
+.secao{
+	position: relative;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-bottom: 50px;
+}
+#perfil{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.im_perfil{
+	width: 125px;
+	height: 125px;
+	background: #ff8c00;
+	margin-bottom: 20px; 
+}
+.texto{
+	font-size: 10pt;
+	text-align: justify;
+}
+
+#form1{
+	position: relative;
+	height: 350px;
+	border-radius: 10%;
+	background: var(--orange);
+}
+#form1 h1, h2{
+	color: white;
+}
+
+#form2{
+	position: relative;
+	height: 350px;
+	border-radius: 10%;
+	background: var(--orange);
+}
+#form2 h1, h2{
+	color: white;
+}
+.titulo{
+	font-size:16pt;
+	text-align: center;
+	margin-bottom: 15px;
+	padding-top: 35px;
+}
+.op1{
+	position: absolute;
+	/*left: 10px;*/
+	/*background: red;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	width: 50%;
+	top: 40%;
+}
+.op2{
+	position: absolute;
+	right: 0px;
+	/*background: blue;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	width: 50%;
+	top: 40%;
+}
+.funcao{
+	font-size: 12pt;
+	text-align: center;
+	position: absolute;
+	top: 0px;
+}
+.simbol{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	/*background: black;*/
+	margin-top: 20px;
+}
+

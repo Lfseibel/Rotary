@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RotaryClub Dourados Guaicurus</title>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="/css/responsividade_home.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shotcut icon" href="/img//rotarylogo.ico">
+	<link rel="stylesheet" type="text/css" href="/css/dropdown.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<header >
+		<div id="top">
+			<div id="branding"><h1 class="texto" id="titulo">Rotary</h1><img class="logo" src="img/rotarylogo.png"></div>
+			<img id="collapsible" src="img/menu_icon.png" onclick="open_menu();">
+			<nav id="menu">
+				<span class="fechar" onclick="close_menu();">X</span>
+				<ul class="links">
+					<li id="home">
+						<a href="index.html" class="lista">
+							<img class="icone" src="img/home.png">
+							<span class="texto">Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="" class="lista">
+							<img class="icone" src="img/medal.png">
+							<span class="texto">Comemorações</span>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a href="" class="lista dropbtn">
+								<img class="icone" src="img/login.png">
+								<span class="texto">Meu perfil</span>
+						</a>
+						<div class="dropdown-content">
+							<a href="/logintesoureiro">Tesoureiro</a>
+							<a href="/loginpresidente">Administrador</a>
+							<a href="/login">Membro</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section id="hero">
+			<div id="mensagem">
+				<h1 id="frase">O ROTARY CONECTA O MUNDO</h1>
+				<hr>
+				<button class="botao">DESCUBRA MAIS</button>
+			</div>
+		</section>
+
+		<section class="conecta">
+			<div class="conect">
+				<img class="logo-rotary" src="img/logo-rotary.png">
+				<h1>Nós conectamos pessoas</h1>
+				<hr>
+				<p>O Rotary reúne talentos e ideias com o objetivo de Criar mudanças duradouras ao redor do Mundo</p>
+				<button class="btnconect">Veja</button>
+			</div>
+		</section>
+
+		<section class="meurotary">
+			<div class="mrcontent">
+				<h1>Meu Rotary</h1>
+				<hr>
+				<div class="mrcaixinhas">
+					<div class="caixinha">
+						<img src="img/icon-quem.png">
+						<a href="#">
+							<h2>Quem somos?</h2>
+						</a>
+						<p>Conectamos pessoas de perspectivas diferentes para trocar ideias, fazer amizades e, acima de tudo, transformar o mundo.</p>
+					</div>
+					<div class="caixinha">
+						<img src="img/icon-envolve.png">
+						<a href="#">
+							<h2>Envolva-se</h2>
+						</a>
+						<p>Encontramos maneiras de fazer o bem hoje e investimos nas próximas gerações para garantir um amanhã melhor.</p>
+					</div>
+					<div class="caixinha">
+						<img src="img/icon-causas.png">
+						<a href="#">
+							<h2>Nossas causas</h2>
+						</a>
+						<p>Vemos as coisas de forma diferente: nossa perspectiva multidisciplinar nos ajuda a enxergar os desafios de uma maneira singular.</p>
+					</div>
+					<div class="caixinha">
+						<img src="img/icon-programas.png">
+						<a href="#">
+							<h2>Programas</h2>
+						</a>
+						<p>Você quer fazer a diferença na sua comunidade ou em seu Bairro? Participe de um projeto do Rotary.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="portfolio">
+
+			<div id="fotos">
+				<div class="picture">
+					<img src="img/portfolio/thumbnails/1.jpg" class="img_portfolio">
+					<div class="hover">
+						<p class="legenda">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+				<div class="picture">
+					<img src="img/portfolio/thumbnails/2.jpg" class="img_portfolio">
+					<div class="hover">
+						<p class="legenda">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+				<div class="picture">
+					<img src="img/portfolio/thumbnails/3.jpg" class="img_portfolio">
+					<div class="hover">
+						<p class="legenda">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+				<div class="picture">
+					<img src="img/portfolio/thumbnails/4.jpg" class="img_portfolio">
+					<div class="hover">
+						<p class="legenda">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+				<div class="picture">
+					<img src="img/portfolio/thumbnails/5.jpg" class="img_portfolio">
+					<div class="hover">
+						<p class="legenda">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+				<div class="picture">
+					<img src="img/portfolio/thumbnails/6.jpg" class="img_portfolio">
+					<div class="hover">
+						<p class="legenda">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- <section class="contato">
+			<h1>Contato</h1>
+			<hr>
+			<div class="ccontent">
+				<div class="contatocaixa">
+					<h1>Nossa sede</h1>
+					<img src="" class="contatoicone">
+					<div class="mapa"></div> 
+				</div>
+				<div class="contatocaixa">
+					<h1>Telefone</h1>
+					<img src="" class="contatoicone">
+					<a target="_blank" href="https://api.whatsapp.com/send?phone=seunumerodetelefone&text=Ola!%20Desejo%20saber%20mais%20sobre%20o%20Rotary.">(00)0000-0000</a>
+				</div>
+				<div class="contatocaixa">
+					<h1>E-mail</h1>
+					<img src="" class="contatoicone">
+					<a target="_blank" href="mailto:RotaryClubDoGua@gmail.com?subject=Ola!%20Desejo%20saber%20mais%20sobre%20o%20Rotary.">RotaryClubDoGua@gmail.com</a>
+				</div>
+
+			</div>
+
+		</section> -->
+		
+	</main>
+
+	<footer>
+		<a href="#">Estágirarios IFMS Campus Dourados &copy; 2019</a>
+	</footer>
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/visual.js"></script>
+</body>
+</html>

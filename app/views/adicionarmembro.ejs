@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rotary - Adicionar membro</title>
+	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+	<link rel="stylesheet" type="text/css" href="/css/addmembro.css">	
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="top">
+			<div id="branding"><h1 class="texto" id="titulo">Rotary</h1>
+			<img class="logo" src="img/rotarylogo.png"></div>
+		</div>
+	</header>
+
+	<main>	
+		<div class="add">
+			<h2>Adicionar membro</h2>
+			<form class="formadd" action="/membros/salvar" method="POST">
+					<div class="seusdados">
+						<h3>Seus dados</h3>
+						<input type="text" name="nome" id="nome_membro" placeholder="Nome">
+						<input type="number" name="cel" id="cel_membro" placeholder="Celular">
+						<input type="email" name="email" id="email_membro" placeholder="E-mail">
+						<input type="number" name="cpf" id="cpf_membro" placeholder="CPF">
+						<input type="date" name="aniversario" id="aniver_membro" placeholder="Aniversário">
+						<input type="text" name="endereco" id="end_membro" placeholder="Endereco">
+						<input type="text" name="emprego" id="emprego_membro" placeholder="Emprego">
+						<input type="text" name="senha" id="senha" placeholder="Senha">
+					</div>
+					<!-- add esposa -->
+					<div class="conjuge">
+						<h3>Cônjuge</h3>
+						<input type="text" name="nome2" id="nome_esp" placeholder="Nome">
+						<input type="number" name="cel2" id="cel_esp" placeholder="Celular">
+						<input type="email" name="email2" id="email_esp" placeholder="E-mail">
+						<input type="number" name="cpf2" id="cpf_esp" placeholder="CPF">
+						<input type="date" name="aniversario2" id="aniver_esp" placeholder="Aniversário">
+						<input type="text" name="endereco2" id="end_esp" placeholder="Endereco">
+						<input type="text" name="emprego2" id="emprego_esp" placeholder="Emprego">
+					</div>
+					<!-- add filhos -->
+					<div class="filhos">
+						<h3>Filho 1</h3>
+						<input type="text" name="nome3" id="nome_esp" placeholder="Nome">
+						<input type="number" name="cel3" id="cel_esp" placeholder="Celular">
+						<input type="email" name="email3" id="email_esp" placeholder="E-mail">
+						<input type="number" name="cpf3" id="cpf_esp" placeholder="CPF">
+						<input type="date" name="aniversario3" id="aniver_esp" placeholder="Aniversário">
+						<input type="text" name="endereco3" id="end_esp" placeholder="Endereco">
+						<input type="text" name="emprego3" id="emprego_esp" placeholder="Emprego">
+					</div>
+
+					<div class="filhos">
+						<h3>Filho 2</h3>
+						<input type="text" name="nome4" id="nome_esp" placeholder="Nome">
+						<input type="number" name="cel4" id="cel_esp" placeholder="Celular">
+						<input type="email" name="email4" id="email_esp" placeholder="E-mail">
+						<input type="number" name="cpf4" id="cpf_esp" placeholder="CPF">
+						<input type="date" name="aniversario4" id="aniver_esp" placeholder="Aniversário">
+						<input type="text" name="endereco4" id="end_esp" placeholder="Endereco">
+						<input type="text" name="emprego4" id="emprego_esp" placeholder="Emprego">
+					</div>
+					<p class="button"><button type="submit">Adicionar</button></p>
+			</form>
+			
+		</div>
+	</main>
+
+	<footer>
+		<a href="#">Estágirarios IFMS Campus Dourados &copy; 2019</a>
+	</footer>
+
+	<script type="text/javascript" src="js/addfilho.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

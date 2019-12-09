@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rotary - Login</title>
+	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+	<link rel="stylesheet" type="text/css" href="/css/styleLogin.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsividade_login.css">
+	<link rel="stylesheet" type="text/css" href="/css/dropdown.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+</head>
+<body>
+	<header >
+		<div id="top">
+			<div id="branding"><h1 class="texto" id="titulo">Rotary</h1><img class="logo" src="img/rotarylogo.png"></div>
+			<img id="collapsible" src="/img/menu_icon.png" onclick="open_menu();">
+			<nav id="menu">
+				<span class="fechar" onclick="close_menu();">X</span>
+				<ul class="links">
+					<li id="home">
+						<a href="index.html" class="lista">
+							<img class="icone" src="img/home.png">
+							<span class="texto">Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="" class="lista">
+							<img class="icone" src="img/medal.png">
+							<span class="texto">Comemorações</span>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a href="" class="lista dropbtn">
+								<img class="icone" src="img/login.png">
+								<span class="texto">Meu perfil</span>
+						</a>
+						<div class="dropdown-content">
+							<a href="/logintesoureiro">Tesoureiro</a>
+							<a href="/loginpresidente">Administrador</a>
+							<a href="/login">Membro</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>	
+		<section class="login" id="login">
+			<div class="log">
+				<h1>Entrar</h1>
+				<form class="caixa" action="/login/presidente" method="POST">
+					<label for="nome">CPF</label>
+					<p><input type="text" id="nome_comp" name="cpf_presidente"></p>
+					<label for="senha">Senha</label>
+					<p><input type="password" id="password" name="senha_presidente"></p>
+					<div class="botaoposition"><button type="submit">Logar como Presidente</button></div>
+				</form>
+			</div>
+		</section>
+	</main>
+	<script type="text/javascript" src="js/visual_login.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+
+</body>
+</html>

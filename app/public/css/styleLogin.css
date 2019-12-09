@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700');
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+:root{
+	--orange: #f4623a;
+	--arejamento1: 1rem;
+	--arejamento2: 0.9rem 1.6rem;
+	--arejamento3: 4rem;
+}
+
+body{
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+header{
+	position: fixed;
+}
+
+#top{
+	height: 100px;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	position: relative;
+	/*background: blue;*/
+}
+
+#branding{
+	display: flex;
+	align-items: center;
+	height: 50px;
+	position: absolute;
+	top: 25px;
+	left: 50px;
+	/*background: red;*/
+}
+
+.logo{
+	height: 30px;
+}
+
+#titulo{
+	font-size: 20pt;
+}
+
+#collapsible{
+	display: none;
+}
+
+#menu{
+	top: 25px;
+	position: absolute;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	right: 50px;
+}
+.fechar{
+	display: none;		
+}
+
+nav ul{
+	list-style: none;
+}
+
+li{
+	display: inline-flex;
+	padding: 0px 20px 0px 20px;
+	height: 50px;
+	align-items: center;
+}
+
+li a{
+	max-width: 150px;
+}
+
+a{
+	font-size: 12pt;
+	text-decoration: none;
+	color: black;
+	padding: 0px 5px 0px 5px;
+}
+.icone{
+	height: 30px;
+}
+
+.texto{
+	color: white;
+	font-weight: bold;
+}
+
+.login{
+	height: 100vh;
+	background: url(../img/bg-rotary.png);
+	background-position: center;
+	background-size: cover; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.log{
+	display: flex;
+	flex-direction: column;
+	align-items:  center;
+}
+
+.log label{
+	color: white;
+	font-size: 1.2rem;
+}
+
+.log h1{
+	margin-bottom: var(--arejamento1);
+	font-size: 2.2rem;
+	color: white;
+	text-transform: uppercase;
+	border-bottom: solid 3px var(--orange);
+}
+
+.log input{
+	margin-bottom: var(--arejamento1);
+	border-style: none;
+	border-radius: 5px;
+	height: 25px;
+	width: 200px;
+	background: white;
+	opacity: 0.5;
+}
+
+.btnlogin{
+	border-style: none;
+	padding: var(--arejamento2);
+	background-color: var(--orange);
+	/*box-shadow: 1px 1px 20px #000;*/
+	color: white;
+	border-radius: 50px;
+	text-transform: uppercase;
+}

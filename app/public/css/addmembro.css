@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700');
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+:root{
+	--orange: #f4623a; /* var(--orange); */
+	--arejamento1: 1rem;
+	--arejamento2: 0.9rem 1.6rem;
+	--arejamento3: 4rem;
+}
+
+body{
+	font-family: 'Merriweather Sans', sans-serif;
+	height: 100vh;
+}
+
+header{
+	background-color: var(--orange);
+}
+
+#top{
+	height: 100px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+#branding{
+	display: flex;
+	align-items: center;
+	height: 50px;
+	position: absolute;
+	top: 25px;
+	left: 50px;
+}
+
+.logo{
+	height: 30px;
+}
+
+.texto{
+	color: white;
+	font-weight: bold;
+}
+
+main{
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.add{
+	margin: 3rem;
+	padding: 1rem;
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+	background: rgba(244, 98, 58, .5);
+	align-items: center;
+	justify-content: center;
+}
+
+.add h2{
+	color: white;
+	padding: .5rem;
+	text-transform: uppercase;
+}
+
+.formadd{
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.seusdados, .conjuge, .filhos{
+	display: flex;
+	flex-direction: column;
+	margin: .8rem;
+}
+
+/*modelo de formulário padrão*/
+.formadd input, .formbusca input{
+  border-style: none;
+  padding: 7px;
+  width: 265px;
+  background: unset;
+  outline: none;
+  border-bottom: solid 1px var(--orange);
+  font-size: 16px;
+}
+
+.formadd h3{
+	color: white;
+}
+
+
+.innerfilho{
+	border: solid var(--orange) 1px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.button{
+	text-align: center;
+	position: absolute;
+	bottom: 40px;
+	background-color: var(--orange);
+	height: 35px;
+	width: 85px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.button2{
+	margin-top: 1rem;
+	text-align: center;
+	bottom: 40px;
+	background-color: var(--orange);
+	height: 35px;
+	width: 85px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+footer{
+	background-color: rgba(211, 211, 211, 1);
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer a{
+	color: rgba(44, 44, 44, 1);
+	font-size: .8rem;
+	text-align: center;
+}

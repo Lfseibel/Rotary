@@ -1,0 +1,9 @@
+Create table presidente (id_presidente int not null primary key auto_increment,nome_presidente varchar(100), cpf_presidente varchar(11),rg_presidente varchar(10), email_presidente varchar(100),senha_presidente varchar(100));
+
+Create table rotariano (id_rotariano int not null primary key auto_increment,nome_rotariano varchar(100),cel_rotariano varchar(11), email_rotariano varchar(100),cpf_rotariano varchar(11),aniversario_rotariano date,endereço_rotariano varchar(100), emprego_rotariano varchar(100), senha_rotariano varchar(100),nome_conjugue varchar(100),cel_conjugue varchar(11), email_conjugue varchar(100),cpf_conjugue varchar(11),aniversario_conjugue date,endereço_conjugue varchar(100), emprego_conjugue varchar(100),nome_filho varchar(100),cel_filho varchar(11), email_filho varchar(100),cpf_filho varchar(11),aniversario_filho date,endereço_filho varchar(100), emprego_filho varchar(100),nome_filho1 varchar(100),cel_filho1 varchar(11), email_filho1 varchar(100),cpf_filho1 varchar(11),aniversario_filho1 date,endereço_filho1 varchar(100), emprego_filho1 varchar(100));
+
+Create table tesoureiro (id_tesoureiro int not null primary key auto_increment,nome_tesoureiro varchar(100), cpf_tesoureiro varchar(11),rg_tesoureiro varchar(10), email_tesoureiro varchar(100),senha_tesoureiro varchar(100));
+
+Create table evento (id_evento int not null primary key auto_increment,nome_evento varchar(100), data_evento date, hora_evento time, local_evento varchar(100), numero_convites int, numero_pessoas int,descricao_evento varchar(1000),cpf_usuario varchar(11),rg_usuario varchar(10), email_usuario varchar(100),senha_usuario varchar(100));
+
+Create table vingressoo (id_venda int not null primary key auto_increment, quantidade_ingressos int, evento_venda int, rotariano_venda int)

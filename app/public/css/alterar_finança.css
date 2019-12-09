@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700');
+
+*{
+	padding: 0;
+	margin: 0;
+}
+:root{
+	--orange: #CA2712; /* var(--orange); */
+	--arejamento1: 1rem;
+	--arejamento2: 0.9rem 1.6rem;
+	--arejamento3: 4rem;
+}
+
+body{
+	font-family: 'Merriweather Sans', sans-serif;
+}
+header{
+	background: var(--orange);
+	position: relative;
+}
+#top{
+	width: 100%;
+	height: 100px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-bottom: 50px;
+}
+.logo{
+	height: 30px;
+	/*position: absolute;*/
+}
+#branding{
+	display: flex;
+	align-items: center;
+	height: 50px;
+	position: absolute;
+	top: 25px;
+	left: 50px;
+}
+.text{
+	color: white;
+	font-weight: bold;
+	font-size: 20pt;
+}	
+.log{
+	top: 25px;
+	position: absolute;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	right: 50px;
+	font-size: 12pt;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0px 15px 0px 15px;
+	color: white;
+}
+.icone{
+	height: 30px;
+	padding: 0px 15px 0px 15px;
+}
+main{
+	height: 60vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+input{
+	border-style: none;
+	padding: 7px;
+	width: 265px;
+	background: unset;
+	outline: none;
+	border-bottom: solid 1px var(--orange);
+	font-size: 16px;
+}
+.bot{
+	margin-top: 15px;
+	width: 120px;
+	height: 40px;
+	border-radius: 20px;
+	border-style: none;
+	/*padding: 5px;*/
+	background: var(--orange);
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+}
+@media screen and (max-width: 450px){
+	.logo{
+		height: 25px;
+	}
+	.text{
+		font-size: 16pt;
+	}
+	#branding{
+		left: 20px;
+	}
+
+	.log{
+		font-size: 9pt;
+		right: 20px;
+	}
+	.icone{
+		height: 25px;
+		padding: 0px 5px 0px 5px;
+	}
+}
