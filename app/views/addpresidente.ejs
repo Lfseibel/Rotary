@@ -1,8 +1,38 @@
-<form action="/presidente/salvar" method="POST">
-    <input type="text" name="nome_presidente"></input>
-    <input type="text" name="cpf_presidente"></input>
-    <input type="text" name="rg_presidente"></input>
-    <input type="text" name="email_presidente"></input>
-    <input type="text" name="senha_presidente"></input>
-    <button type="submit">ADD PRESIDENTE</button>
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/addmembro.css">
+  	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+  		<div id="top">
+  			<div id="branding"><h1 class="texto" id="titulo">Rotary</h1>
+  			<img class="logo" src="img/rotarylogo.png"></div>
+  		</div>
+  	</header>
+    <main>
+
+    <div class="add">
+
+    <form class="formadd" action="/presidente/salvar" method="POST">
+      <div class="seusdados">
+        <input type="text" name="nome_presidente" placeholder="Nome do Presidente"></input>
+        <input type="number" name="cpf_presidente" placeholder="Cpf Do Presidente"></input>
+        <input type="number" name="rg_presidente" placeholder="Rg do Presidente"></input>
+        <input type="email" name="email_presidente" placeholder="Email do Presidente"></input>
+        <input type="password" name="senha_presidente" placeholder="Senha"></input>
+        <button class="button" type="submit">ADD PRESIDENTE</button>
+      </div>
+    </form>
+
+    </div>
+
+    </main>
+
+  </body>
+</html>

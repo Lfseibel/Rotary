@@ -1,8 +1,37 @@
-<form action="/tesoureiro/salvar" method="POST">
-    <input type="text" name="nome_tesoureiro"></input>
-    <input type="text" name="cpf_tesoureiro"></input>
-    <input type="text" name="rg_tesoureiro"></input>
-    <input type="text" name="email_tesoureiro"></input>
-    <input type="text" name="senha_tesoureiro"></input>
-    <button type="submit">ADD TESOUREIRO</button>
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/addmembro.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+  		<div id="top">
+  			<div id="branding"><h1 class="texto" id="titulo">Rotary</h1>
+  			<img class="logo" src="img/rotarylogo.png"></div>
+  		</div>
+  	</header>
+    <main>
+
+    <div class="add">
+
+      <form class="formadd" action="/presidente/salvar" method="POST">
+        <div class="seusdados">
+          <input type="text" name="nome_tesoureiro" placeholder="Nome Tesoureiro"></input>
+          <input type="number" name="cpf_tesoureiro" placeholder="Cpf Tesoureiro"></input>
+          <input type="number" name="rg_tesoureiro" placeholder="Rg Tesoureiro"></input>
+          <input type="email" name="email_tesoureiro" placeholder="Email Tesoureiro"></input>
+          <input type="password" name="senha_tesoureiro" placeholder="Senha"></input>
+          <button class="button" type="submit">ADD TESOUREIRO</button>
+        </div>
+      </form>
+
+    </div>
+
+    </main>
+  </body>
+</html>
