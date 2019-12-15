@@ -80,10 +80,12 @@ header{
 	height: 125px;
 	background: #ff8c00;
 	margin-bottom: 20px; 
+	border-radius: 50%;
 }
 .texto{
 	font-size: 10pt;
 	text-align: justify;
+	text-indent: var(--arejamento1);
 }
 
 

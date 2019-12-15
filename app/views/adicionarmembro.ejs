@@ -13,55 +13,56 @@
 			<img class="logo" src="img/rotarylogo.png"></div>
 		</div>
 	</header>
+
 	<main>	
 		<div class="add">
 			<h2>Adicionar membro</h2>
-			<form>
+			<form class="formadd" action="/membros/salvar" method="POST">
 					<div class="seusdados">
 						<h3>Seus dados</h3>
-						<input type="text" id="nome_membro" placeholder="Nome">
-						<input type="number" id="cel_membro" placeholder="Celular">
-						<input type="email" id="email_membro" placeholder="E-mail">
-						<input type="text" id="cpf_membro" placeholder="CPF">
-						<input type="date" id="aniversario_membro" placeholder="Aniversário">
-						<input type="text" id="endereco_membro" placeholder="Endereco">
-						<input type="text" id="emprego_membro" placeholder="Emprego">
-						<input type="password" id="senha_membro" placeholder="Senha">
+						<input type="text" name="nome" id="nome_membro" placeholder="Nome">
+						<input type="number" name="cel" id="cel_membro" placeholder="Celular">
+						<input type="email" name="email" id="email_membro" placeholder="E-mail">
+						<input type="number" name="cpf" id="cpf_membro" placeholder="CPF">
+						<input type="date" name="aniversario" id="aniver_membro" placeholder="Aniversário">
+						<input type="text" name="endereco" id="end_membro" placeholder="Endereco">
+						<input type="text" name="emprego" id="emprego_membro" placeholder="Emprego">
+						<input type="text" name="senha" id="senha" placeholder="Senha">
 					</div>
 					<!-- add esposa -->
 					<div class="conjuge">
 						<h3>Cônjuge</h3>
-						<input type="text" id="nome_esp" placeholder="Nome">
-						<input type="number" id="cel_esp" placeholder="Celular">
-						<input type="email" id="email_esp" placeholder="E-mail">
-						<input type="number" id="cpf_esp" placeholder="CPF">
-						<input type="date" id="aniversario_esp" placeholder="Aniversário">
-						<input type="text" id="endereco_esp" placeholder="Endereco">
-						<input type="text" id="emprego_esp" placeholder="Emprego">
+						<input type="text" name="nome2" id="nome_esp" placeholder="Nome">
+						<input type="number" name="cel2" id="cel_esp" placeholder="Celular">
+						<input type="email" name="email2" id="email_esp" placeholder="E-mail">
+						<input type="number" name="cpf2" id="cpf_esp" placeholder="CPF">
+						<input type="date" name="aniversario2" id="aniver_esp" placeholder="Aniversário">
+						<input type="text" name="endereco2" id="end_esp" placeholder="Endereco">
+						<input type="text" name="emprego2" id="emprego_esp" placeholder="Emprego">
 					</div>
 					<!-- add filhos -->
 					<div class="filhos">
 						<h3>Filho 1</h3>
-						<input type="text" id="nome_fi" placeholder="Nome">
-						<input type="number" id="cel_fi" placeholder="Celular">
-						<input type="email" id="email_fi" placeholder="E-mail">
-						<input type="number" id="cpf_fi" placeholder="CPF">
-						<input type="date" id="aniversario_fi" placeholder="Aniversário">
-						<input type="text" id="endereco_fi" placeholder="Endereco">
-						<input type="text" id="emprego_fi" placeholder="Emprego">
+						<input type="text" name="nome3" id="nome_esp" placeholder="Nome">
+						<input type="number" name="cel3" id="cel_esp" placeholder="Celular">
+						<input type="email" name="email3" id="email_esp" placeholder="E-mail">
+						<input type="number" name="cpf3" id="cpf_esp" placeholder="CPF">
+						<input type="date" name="aniversario3" id="aniver_esp" placeholder="Aniversário">
+						<input type="text" name="endereco3" id="end_esp" placeholder="Endereco">
+						<input type="text" name="emprego3" id="emprego_esp" placeholder="Emprego">
 					</div>
 
 					<div class="filhos">
 						<h3>Filho 2</h3>
-						<input type="text" id="nome_fi2" placeholder="Nome">
-						<input type="number" id="cel_fi2" placeholder="Celular">
-						<input type="email" id="email_fi2" placeholder="E-mail">
-						<input type="number" id="cpf_fi2" placeholder="CPF">
-						<input type="date" id="aniversario_fi2" placeholder="Aniversário">
-						<input type="text" id="endereco_fi2" placeholder="Endereco">
-						<input type="text" id="emprego_fi2" placeholder="Emprego">
+						<input type="text" name="nome4" id="nome_esp" placeholder="Nome">
+						<input type="number" name="cel4" id="cel_esp" placeholder="Celular">
+						<input type="email" name="email4" id="email_esp" placeholder="E-mail">
+						<input type="number" name="cpf4" id="cpf_esp" placeholder="CPF">
+						<input type="date" name="aniversario4" id="aniver_esp" placeholder="Aniversário">
+						<input type="text" name="endereco4" id="end_esp" placeholder="Endereco">
+						<input type="text" name="emprego4" id="emprego_esp" placeholder="Emprego">
 					</div>
-					<p class="button"><button type="button" onclick="cadastrar()">Adicionar</button></p>
+					<p class="button"><button type="submit">Adicionar</button></p>
 			</form>
 			
 		</div>

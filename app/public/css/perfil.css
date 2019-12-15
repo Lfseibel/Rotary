@@ -79,10 +79,13 @@ header{
 	height: 125px;
 	background: #ff8c00;
 	margin-bottom: 20px; 
+	border-radius: 50%;
+
 }
 .texto{
 	font-size: 10pt;
 	text-align: justify;
+	text-indent: var(--arejamento1);
 }
 
 #form1{
@@ -146,3 +149,66 @@ header{
 	margin-top: 20px;
 }
 
+@media screen and (min-width: 600px){
+	.im_perfil{
+		width: 200px;
+		height: 200px;
+	}
+	.texto{
+		font-size: 11pt;
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+	#form1{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+}
+
+@media screen and (min-width: 800px){
+	.im_perfil{
+		width: 200px;
+		height: 200px;
+	}
+	.texto{
+		font-size: 11pt;
+		margin-left: 150px;
+		margin-right: 150px;
+	}
+	#form1{
+		margin-left: 150px;
+		margin-right: 150px;
+	}
+}
+
+@media screen and (min-width: 950px){
+	.im_perfil{
+		width: 200px;
+		height: 200px;
+	}
+	.texto{
+		font-size: 11pt;
+		margin-left: 300px;
+		margin-right: 300px;
+	}
+	#form1{
+		margin-left: 300px;
+		margin-right: 300px;
+	}
+}
+
+@media screen and (min-width: 1082px){
+	.im_perfil{
+		width: 200px;
+		height: 200px;
+	}
+	.texto{
+		font-size: 11pt;
+		margin-left: 350px;
+		margin-right: 350px;
+	}
+	#form1{
+		margin-left: 450px;
+		margin-right: 450px;
+	}
+}
