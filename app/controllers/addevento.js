@@ -9,44 +9,39 @@ module.exports.tela = function(application, req, res) {
 }
 
 module.exports.adicionarevento = function(application, req, res){
-	const usuario = req.body;
-	req.assert('nome_usuario','Nome do usuário é obrigatorio').notEmpty();
-	req.assert('ra_usuario','RA deve conter 6 números').len(6,6);
-	req.assert('cpf_usuario','CPF deve conter 11 digitos').len(11,11);
-	req.assert('rg_usuario','RG deve conter entre 4 á 12 digitos').len(4,12);
+	const evento = req.body;
+	req.assert('nome','Nome do evento é obrigatorio').notEmpty();
+	req.assert('data','Data é obrigatoria').notEmpty();
+	req.assert('horario','Horário é obrigatório').notEmpty();
+	req.assert('local','Local do evento é obrigatória').notEmpty();
+	req.assert('pessoas','Média de pessoas é obrigatória').notEmpty();
+	req.assert('descricao','Descricao é obrigatória').notEmpty();
 	const erros = req.validationErrors();
 	if (erros) {
-		res.render("adicionarmembro", {validacao : erros, usuario : usuario});
+		res.send("preencher")
 		return;
 	}
-	const ra = usuario.ra_usuario; 
-	const cpf = usuario.cpf_usuario;
-	const rg = usuario.rg_usuario;
-	const email = usuario.email_usuario;
-	const nome = usuario.nome_usuario;
-	const senha = usuario.senha_usuario;
-	const csenha = usuario.csenha_usuario;
-	/* importar o modulo do bcrypt*/
-	const bcrypt = require('bcrypt');
-	const saltRounds = 10;
-	if (senha==csenha) 
-	{
-		const connection = application.config.dbConnection();//recupera modulo que conecta com o banco
-		const alunosModel = new application.app.models.AlunosDAO(connection);
-		alunosModel.verificarCadastro(ra, cpf, rg, email, function(error, result){
-			if (result.length > 0) {
-						res.send('Já existe um usuário com este RA/CPF/RG ou EMAIL cadastrado');
-					} else {
-						bcrypt.hash(senha, saltRounds, function(err, hash){
-							alunosModel.salvarAluno(ra, cpf, rg, email, nome, hash, function(error, result){
-								res.redirect('/');
-							});	
-						});		
-				}		
-		});
-	} 
-	else 
-	{
-		res.send('Senhas não batem');
-	}
+	const nome = evento.nome; 
+	const data = evento.data;
+	const horario = evento.horario;
+	const local = evento.local;
+	const pessoas = evento.pessoas;
+
+	const connection = application.config.dbConnection();//recupera modulo que conecta com o banco
+	const presidenteModel = new application.app.models.PresidenteDAO(connection);	
+
+	presidenteModel.verificarCadastroEvento(nome, function (error, result) {
+		if (result.length > 0) {
+			res.send("cadastrado");
+		}
+			else 
+			{
+				presidenteModel.salvarEvento(nome, data, horario, local, pessoas, function(error, result){
+					console.log(error);
+					res.send("sucesso");
+				});	
+		}		
+	});
+
+	
 }

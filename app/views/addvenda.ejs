@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Criar evento</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/evento.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shotcut icon" href="/img//rotarylogo.ico">
+</head>
+<body>
+	<header>
+		<div id="top">
+			<div id="branding"><h1 class="texto" id="titulo">Rotary</h1><img class="logo" src="/img/rotarylogo.png"></div>
+			<img id="collapsible" src="img/menu_icon.png" onclick="open_menu();">
+			<nav id="menu">
+				<span class="fechar" onclick="close_menu();">X</span>
+				<ul class="links">
+					<li id="home"><a href=""><img class="icone" src="/img/home.png"><a class="texto">Home</a></a></li>
+					<li><a href=""><img class="icone" src="/img/medal.png"><a class="texto" href="">Comemorações</a></a></li>
+					<li><a href=""><img class="icone" src="/img/doar.png"><a class="texto" href="">Faça uma doação</a></a></li>
+					<li><a href=""><img class="icone" src="/img/login.png"><a class="texto" href="/presidente">Meu perfil</a></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<h1>Criar Venda</h1>
+		<section>
+			<form >
+				<input type="text" placeholder="nome do evento" name="nome" id="nome">
+				<input type="text" placeholder="valor ingresso" name="valor" id="valor">
+				<input type="text" placeholder="quantidade de ingressos" name="ingressos" id="quantidade">
+				<input type="text" placeholder="Rotariano que realizará a venda" name="rotariano" id="rotariano">
+				<button type="button" onclick="cadastro_venda()">Registrar venda</button>
+			</form>
+			
+		</section>	
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/toastmejs@latest/dist/js/toastme.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+	<script type="text/javascript" src="/js/evento.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/visual.js"></script>
+</body>
+</html>

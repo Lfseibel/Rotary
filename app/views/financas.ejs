@@ -26,6 +26,17 @@
 			</select>
 			<input type="button" onclick="financas_verificar();" value="Resultados">
 		</div>
+		<% if(financas.length > 0) { %>
+			<% for(var i = 0; i < financas.length; i++) { %>
+				<li>
+					
+					  <p><%= financas[i].valor_financa %></p>
+					  <p><%= financas[i].data_financa %></p>
+					  <p><%= financas[i].estado_financa %></p>
+				
+				</li> 
+			  <% } %>
+			<% } %>
 		<div class="tabela">
 			<p id="valor_ganho"></p>
 			<p id="valor_gasto"></p>

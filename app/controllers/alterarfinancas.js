@@ -1,13 +1,6 @@
 module.exports.tela = function(application, req, res) {
 	if (req.session.loggedin) {
-		const vsiape = req.session.siape;
-		res.render("tcadastroservidores"); 
-		const connection = application.config.dbConnection();//recupera modulo que conecta com o banco
-		const servidoresModel = new application.app.models.ServidoresDAO(connection);
-		servidoresModel.pegarNome(vsiape, function(error, result)
-		{
-			res.render("alterarfinancas");
-		});		
+		res.render("alterarfinancas");
 	} 
 	else 
 	{
@@ -15,42 +8,40 @@ module.exports.tela = function(application, req, res) {
 	}
 }
 
-module.exports.alterar_financas = function(application, req, res){
-	const servidor = req.body;
-	req.assert('nome_servidor','Nome do servidor é obrigatorio').notEmpty();
-	req.assert('siape_servidor','SIAPE deve conter 6 números').len(6,6);
+module.exports.adicionar = function(application, req, res){
+
+	req.assert('quantidade','Nome do servidor é obrigatorio').notEmpty();
 	const erros = req.validationErrors();
 	if (erros) {
-		res.render("servidor", {validacao : erros, servidor : servidor});
+		res.send("preencher");
 		return;
 	}
-	const nome = servidor.nome_servidor; 
-	const siape = servidor.siape_servidor;
-	const senha = servidor.senha_servidor;
-	const csenha = servidor.csenha_servidor;
-	const bcrypt = require('bcrypt');
-	const saltRounds = 10;
-	if (senha==csenha) {
-		const connection = application.config.dbConnection();//recupera modulo que conecta com o banco
-		const servidoresModel = new application.app.models.ServidoresDAO(connection);
-		servidoresModel.verificarCadastro(siape, function(error, result){
-			if (result.length > 0) {
-						res.send('Já existe um servidor com esta SIAPE cadastrado');
-					} 
-					else 
-					{
-						bcrypt.hash(senha, saltRounds, function(err, hash){
-							servidoresModel.salvarServidor(nome, siape, hash, function(error, result){
-								res.redirect('/servidor');
-						});	
-						});	
-						
-				}		
-		});
-	}
-	else
+	const quantidade = req.body.quantidade;
+	const estado = "Adicionado";
+	const connection = application.config.dbConnection();//recupera modulo que conecta com o banco
+	const tesoureiroModel = new application.app.models.TesoureiroDAO(connection);
+	tesoureiroModel.alterarFinanca(quantidade, estado, function(error, result)
 	{
-		res.send('senhas não batem')
+		console.log(error);
+		res.send("sucesso");
+	});
+}
+
+module.exports.subtrair = function(application, req, res){
+
+	req.assert('quantidade','Nome do servidor é obrigatorio').notEmpty();
+	const erros = req.validationErrors();
+	if (erros) {
+		res.send("preencher");
+		return;
 	}
+	const quantidade = req.body.quantidade;
+	const estado = "Subtraido";
+	const connection = application.config.dbConnection();//recupera modulo que conecta com o banco
+	const tesoureiroModel = new application.app.models.TesoureiroDAO(connection);
+	tesoureiroModel.alterarFinanca(quantidade, estado, function(error, result)
+	{
+		
+	});
 		
 }

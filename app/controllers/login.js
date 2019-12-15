@@ -74,68 +74,119 @@ module.exports.homepresidente = function(application, req, res) {
 }
 
 module.exports.login_Tesoureiro = function(application, req, res){
-	const cpf = req.body.cpf_tesoureiro;
-	const senha = req.body.senha_tesoureiro;
+	const cpf = req.body.cpf;
+	const senha = req.body.senha;
 	const bcrypt = require('bcrypt');
 	const connection = application.config.dbConnection();//recupera modulo que conecta com o banco
-	const tesoureiroModel = new application.app.models.TesoureiroDAO(connection);
-	tesoureiroModel.loginTesoureiro(cpf, function(error, result){
-		const hash = result[0].senha_tesoureiro.toString();
-		bcrypt.compare(senha, hash, function(error, response){
-			if (response == true) {
-				req.session.loggedin = true;
-				req.session.cpf = cpf;
-				res.redirect('/tesoureiro');
-			} else {
-				res.render('logintesoureiro', { erro: 'Senha ou cpf incorretos'});
-			}	
-				
-		});
-				
+	const tesoureirosModel = new application.app.models.TesoureiroDAO(connection);
+
+	req.assert('cpf','Cpf deve conter 11 números').notEmpty();
+	req.assert('senha','Senha é obrigatorio').notEmpty();
+	const erros = req.validationErrors();
+	if (erros) {
+		res.send('preencher');
+		return;
+	}
+
+	tesoureirosModel.verificarCadastroLogin(cpf, function (error, result) {
+		if (result.length > 0) {
+			tesoureirosModel.loginTesoureiro(cpf, function(error, result){
+				const hash = result[0].senha_tesoureiro.toString();
+				bcrypt.compare(senha, hash, function(error, response){
+					if (response == true) {
+						req.session.loggedin = true;
+						req.session.cpf = cpf;
+						res.send('entrada');
+					} else {
+						res.send('erro');
+					}					
+				});				
+			});
+				} else {
+					res.send('cadastro');
+		}		
 	});
 }
 
 module.exports.login_Presidente = function(application, req, res){
-	const cpf = req.body.cpf_presidente;
-	const senha = req.body.senha_presidente;
+	const cpf = req.body.cpf;
+	const senha = req.body.senha;
 	const bcrypt = require('bcrypt');
 	const connection = application.config.dbConnection();//recupera modulo que conecta com o banco
-	const presidenteModel = new application.app.models.PresidenteDAO(connection);
-	presidenteModel.loginPresidente(cpf, function(error, result){
-		const hash = result[0].senha_presidente.toString();
-		bcrypt.compare(senha, hash, function(error, response){
-			if (response == true) {
-				req.session.loggedin1 = true;
-				req.session.cpf = cpf;
-				res.redirect('/presidente');
-			} else {
-				res.render('loginpresidente', { erro: 'Senha ou cpf incorretos'});
-			}	
-				
-		});
-				
+	const presidentesModel = new application.app.models.PresidenteDAO(connection);
+
+	req.assert('cpf','Cpf deve conter 11 números').notEmpty();
+	req.assert('senha','Senha é obrigatorio').notEmpty();
+	const erros = req.validationErrors();
+	if (erros) {
+		res.send('preencher');
+		return;
+	}
+
+	presidentesModel.verificarCadastroLogin(cpf, function (error, result) {
+		if (result.length > 0) {
+			presidentesModel.loginPresidente(cpf, function(error, result){
+				const hash = result[0].senha_presidente.toString();
+				bcrypt.compare(senha, hash, function(error, response){
+					if (response == true) {
+						req.session.loggedin1 = true;
+						req.session.cpf = cpf;
+						res.send('entrada');
+					} else {
+						res.send('erro');
+					}					
+				});				
+			});
+				} else {
+					res.send('cadastro');
+		}		
 	});
 }
 
 module.exports.login_Rotariano = function(application, req, res){
-	const cpf = req.body.cpf_completo;
+	const cpf = req.body.cpf;
 	const senha = req.body.senha;
 	const bcrypt = require('bcrypt');
 	const connection = application.config.dbConnection();//recupera modulo que conecta com o banco
-	const rotarianoModel = new application.app.models.RotarianoDAO(connection);
-	rotarianoModel.loginRotariano(cpf, function(error, result){
-		const hash = result[0].senha_rotariano.toString();
-		bcrypt.compare(senha, hash, function(error, response){
-			if (response == true) {
-				req.session.loggedin2 = true;
-				req.session.cpf = cpf;
-				res.redirect('/membro');
-			} else {
-				res.render('login', { erro: 'Senha ou cpf incorretos'});
-			}	
-				
-		});
-				
+	const rotarianosModel = new application.app.models.RotarianoDAO(connection);
+
+	req.assert('cpf','Cpf deve conter 11 números').notEmpty();
+	req.assert('senha','Senha é obrigatorio').notEmpty();
+	const erros = req.validationErrors();
+	if (erros) {
+		res.send('preencher');
+		return;
+	}
+
+	rotarianosModel.verificarCadastroLogin(cpf, function (error, result) {
+		if (result.length > 0) {
+			rotarianosModel.loginRotariano(cpf, function(error, result){
+				const hash = result[0].senha_rotariano.toString();
+				bcrypt.compare(senha, hash, function(error, response){
+					if (response == true) {
+						req.session.loggedin2 = true;
+						req.session.cpf = cpf;
+						res.send('entrada');
+					} else {
+						res.send('erro');
+					}					
+				});				
+			});
+				} else {
+					res.send('cadastro');
+		}		
 	});
+
 }
+
+module.exports.logout = function(application, req, res){
+	req.session.destroy(err =>{ 
+		if (err) {
+			return res.redirect('/');
+		}
+	
+		res.redirect('/');
+		})
+}
+
 

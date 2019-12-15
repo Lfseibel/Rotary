@@ -19,15 +19,15 @@
 			<h2>Buscar membro</h2>
 			<form class="formbusca" action="/membros/buscar" method="POST">
 				<div class="buscamembro">
-					<input type="text" name="cpf" placeholder="CPF" id="buscar">
+					<input type="number" name="cpf" placeholder="CPF" id="buscar">
 					<p class="button2"><button>Buscar</button></p>
 				</div>
 			</form>
 		</div>
 	</main>
 	
-	<% if(usuario) { %>
-		<p></p>
+	<% if(rotariano.length > 0) { %>
+		<p><%= rotariano[0].nome_rotariano %></p>
 	<% } %>
 
 	<footer>

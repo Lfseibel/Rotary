@@ -47,19 +47,25 @@
 		<section class="login" id="login">
 			<div class="log">
 				<h1>Entrar</h1>
-				<form class="caixa" action="/login/presidente" method="POST">
+				<form class="caixa">
 					<label for="nome">CPF</label>
-					<p><input type="text" id="nome_comp" name="cpf_presidente"></p>
+					<p><input type="text" id="cpf" name="cpf_presidente"></p>
 					<label for="senha">Senha</label>
-					<p><input type="password" id="password" name="senha_presidente"></p>
-					<div class="botaoposition"><button type="submit">Logar como Presidente</button></div>
+					<p><input type="password" id="senha" name="senha_presidente"></p>
+					<div class="botaoposition"><a class="btnlogin" onclick="login_presidente()" >Entre</a></div>
 				</form>
 			</div>
 		</section>
 	</main>
-	<script type="text/javascript" src="js/visual_login.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/login.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/toastmejs@latest/dist/js/toastme.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+	<script type="text/javascript" src="/js/visual_login.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/login.js"></script>
 
 </body>
 </html>

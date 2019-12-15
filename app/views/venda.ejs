@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+	<link rel="stylesheet" type="text/css" href="/css/addmembro.css">	
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="top">
+			<div id="branding"><h1 class="texto" id="titulo">Rotary</h1>
+			<img class="logo" src="img/rotarylogo.png"></div>
+		</div>
+	</header>
+	<h1>Registrar venda do ingresso</h1>
+           <form>
+				<input type="text"  name="id" id="id" value="<%= vendas[0].id_venda %>" readonly>
+                <input type="text"  name="nome" id="nome" value="<%= vendas[0].evento %>" readonly>
+				<input type="text" name="valor" value="<%= vendas[0].valor_ingresso %>" id="valor" readonly>
+				<input type="text"  name="ingressos" value="<%= vendas[0].quantidade_ingressos %>" id="quantidade" readonly>
+                <input type="text"  name="rotariano" value="<%= vendas[0].vendas_realizadas %>" id="realizadas" readonly>
+                <input type="number"  name="ingresso" id="vender">
+				<button type="button" onclick="realizar_venda()">Realizar venda</button>
+           </form>
+
+	<footer>
+		<a href="#">Estágirarios IFMS Campus Dourados &copy; 2019</a>
+	</footer>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/toastmejs@latest/dist/js/toastme.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+	<script type="text/javascript" src="/js/evento.js"></script>
+</body>	
+</html>

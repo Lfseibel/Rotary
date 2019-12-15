@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+	<link rel="stylesheet" type="text/css" href="/css/addmembro.css">	
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div id="top">
+			<div id="branding"><h1 class="texto" id="titulo">Rotary</h1>
+			<img class="logo" src="img/rotarylogo.png"></div>
+		</div>
+	</header>
+	<h1>Vendas dos Eventos</h1>
+    <% if(vendas.length > 0) { %>
+        <% for(var i = 0; i < vendas.length; i++) { %>
+            <li>
+                  <p><%= vendas[i].evento %></p>
+                  <p><%= vendas[i].rotariano %></p>
+                  <p><%= vendas[i].quantidade_ingressos %></p>
+                  <p><%= vendas[i].valor_ingresso %></p>
+                  <p><%= vendas[i].vendas_realizadas %></p>
+            </li> 
+          <% } %>
+        <% } %>
+
+	<footer>
+		<a href="#">Estágirarios IFMS Campus Dourados &copy; 2019</a>
+	</footer>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>	
+</html>

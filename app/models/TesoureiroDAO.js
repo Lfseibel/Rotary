@@ -10,16 +10,16 @@ TesoureiroDAO.prototype.loginTesoureiro = function(cpf, callback){
 	this._connection.query('select senha_tesoureiro from tesoureiro where cpf_tesoureiro = ? ', cpf, callback);
 }
 
-TesoureiroDAO.prototype.verificarCadastro = function(ra, cpf, rg, email, callback){
-	this._connection.query('select * from usuario where ra_usuario = ? OR cpf_usuario = ? OR rg_usuario = ? OR email_usuario = ?', [ra,cpf,rg,email], callback);
+TesoureiroDAO.prototype.verificarCadastroLogin = function(cpf, callback){
+	this._connection.query('select * from tesoureiro where cpf_tesoureiro = ? ', [cpf], callback);
 }
 
-TesoureiroDAO.prototype.coisasAluno = function(vnome, callback){
-	this._connection.query('select * from usuario where ra_usuario = ? ', vnome, callback);
+TesoureiroDAO.prototype.alterarFinanca = function(estado, quantidade, callback){
+	this._connection.query('insert into financas set estado_financa = ?,valor_financa = ?', [quantidade, estado] , callback);
 }
 
-TesoureiroDAO.prototype.dadosAluno = function(vnome, callback){
-	this._connection.query('select * from usuario where ra_usuario = ? ', vnome, callback);
+TesoureiroDAO.prototype.getFinancas = function(estado, quantidade, callback){
+	this._connection.query('select * from financas', callback);
 }
 
 module.exports = function(){

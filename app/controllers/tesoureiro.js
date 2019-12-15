@@ -3,10 +3,8 @@ module.exports.tesoureiro = function(application, req, res) {
 		const vtesoureiro = req.session.cpf;
 		const connection = application.config.dbConnection();//recupera modulo que conecta com o banco
 		const tesoureiroModel = new application.app.models.TesoureiroDAO(connection);
-		tesoureiroModel.pegarNome(vtesoureiro, function(error, result)
-		{
-			res.render("tesoureiro", {tesoureiro : result});
-		});		
+
+			res.render("tesoureiro");	
 	} else {
 		res.redirect('/logintesoureiro');
 	}

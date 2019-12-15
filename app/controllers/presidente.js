@@ -23,3 +23,20 @@ module.exports.logout_Presidente = function(application, req, res){
 		res.redirect('/');
 		})
 }
+
+module.exports.vendas = function(application, req, res) {
+	if (req.session.loggedin1) {
+		const vpresidente = req.session.cpf;
+		const connection = application.config.dbConnection();//recupera modulo que conecta com o banco
+		const presidenteModel = new application.app.models.PresidenteDAO(connection);
+		presidenteModel.pegarVendas(function(error, result)
+		{
+			res.render("vendas", {vendas : result});
+		});	
+	} 
+	else 
+	{
+		res.redirect('/loginpresidente');
+	}
+}
+

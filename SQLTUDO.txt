@@ -4,6 +4,8 @@ Create table rotariano (id_rotariano int not null primary key auto_increment,nom
 
 Create table tesoureiro (id_tesoureiro int not null primary key auto_increment,nome_tesoureiro varchar(100), cpf_tesoureiro varchar(11),rg_tesoureiro varchar(10), email_tesoureiro varchar(100),senha_tesoureiro varchar(100));
 
-Create table evento (id_evento int not null primary key auto_increment,nome_evento varchar(100), data_evento date, hora_evento time, local_evento varchar(100), numero_convites int, numero_pessoas int,descricao_evento varchar(1000),cpf_usuario varchar(11),rg_usuario varchar(10), email_usuario varchar(100),senha_usuario varchar(100));
+Create table evento (id_evento int not null primary key auto_increment,nome_evento varchar(100), data_evento date, hora_evento time, local_evento varchar(100), numero_convites int);
 
-Create table vingressoo (id_venda int not null primary key auto_increment, quantidade_ingressos int, evento_venda int, rotariano_venda int)
+Create table vendas (id_venda int not null primary key auto_increment, evento varchar(100), rotariano varchar(100),quantidade_ingressos int, valor_ingresso int, evento_venda int, rotariano_venda int, vendas_realizadas int, foreign key (evento_venda) references evento(id_evento), foreign key (rotariano_venda) references rotariano(id_rotariano));
+
+Create table financas (id_financa int not null primary key auto_increment, valor_financa int, data_financa timestamp default current_timestamp, estado_financa varchar(100));
