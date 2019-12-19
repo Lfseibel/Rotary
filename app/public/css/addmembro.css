@@ -55,6 +55,21 @@ main{
 	position: relative;
 }
 
+.vendas{
+	margin-top: 5vh;
+	margin-left: 20vw;
+	margin-bottom: 5vh;
+	height: 30vh;
+	width: 60vw;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	list-style: none;
+	background-color: var(--orange);
+	font-size: 21px;
+}
+
 .add{
 	margin: 3rem;
 	padding: 1rem;
